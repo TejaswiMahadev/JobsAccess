@@ -49,7 +49,7 @@ async def search_jobs(
     - **limit**: Number of results to return (default: 10, max: 50)
     """
     try:
-        url = "https://active-jobs-db.p.rapidapi.com/active-ats-6m"
+        url = "https://linkedin-job-search-api.p.rapidapi.com/active-jb-7d"
         
         querystring = {
             "description_type": "text"
@@ -64,12 +64,12 @@ async def search_jobs(
             querystring["keywords"] = keywords
         if limit:
             querystring["limit"] = str(limit)
-        
+
         headers = {
-            "x-rapidapi-key": "72b6266cf3msh141904a6b5b9345p195fabjsnc1247aee3b15",
-            "x-rapidapi-host": "active-jobs-db.p.rapidapi.com"
+	        "x-rapidapi-key": "4ff3e1c21dmshbbbf51d17aad235p17cf01jsnc1cb280d7e93",
+	        "x-rapidapi-host": "linkedin-job-search-api.p.rapidapi.com"
         }
-        
+
         response = requests.get(url, headers=headers, params=querystring)
         response.raise_for_status()
         job_data = response.json()
