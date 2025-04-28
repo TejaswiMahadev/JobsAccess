@@ -59,7 +59,7 @@ async def search_jobs(
         }
         
         headers = {
-            "x-rapidapi-key": "72b6266cf3msh141904a6b5b9345p195fabjsnc1247aee3b15",
+            "x-rapidapi-key": "RAPID_API_KEY",
             "x-rapidapi-host": "linkedin-job-search-api.p.rapidapi.com"
         }
         
